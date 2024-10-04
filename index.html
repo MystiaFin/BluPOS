@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./pages/global.css">
     <title>RedPOS</title>
 </head>
 <body>
-    <iframe src="pages/home/home.html"></iframe>
+    <div id="sidebar"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/components/navbar.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('#sidebar').createSidebar();
+      });
+    </script>
+    <script src="route.js"></script>
 </body>
 </html>
