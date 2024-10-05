@@ -2,7 +2,7 @@
   $.fn.createSidebar = function () {
     const sidebarHtml = `
             <nav class="sidebar">
-                <button class="hamburger-button">
+                <button class="hamburger-button" aria-label="Toggle menu">
                     <div class="hamburger-icon">
                       <span class="hamburger-line"></span>
                       <span class="hamburger-line"></span>
@@ -26,25 +26,6 @@
             </nav>`;
 
     this.html(sidebarHtml);
-    $("<style>")
-      .text(
-        `
-        .sidebar {
-          height: 100%;
-          transition: left 0.3s ease;
-          width: 250px;
-        }
-        .sidebar-visible {
-          left: 0;
-        }
-      `
-      )
-      .appendTo("head");
-
-    $(".hamburger-button").on("click", function () {
-      $(".sidebar").toggleClass("sidebar-visible");
-      $(this).toggleClass("open");
-    });
     return this;
   };
 })(jQuery);
