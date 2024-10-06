@@ -116,17 +116,27 @@
                   ["Mocha", 19.5],
                 ]);
 
+                var screenWidth = window.innerWidth;
+                var isMobile = screenWidth <= 768;
+
                 var options = {
                   title: "Menu Distribution",
+                  titleTextStyle: {
+                    color: "#cdd6f4",
+                    fontSize: 24,
+                    fontName: "Poppins",
+                  },
                   pieHole: 0,
                   backgroundColor: "transparent",
-                  chartArea: { width: "75%", height: "75%" },
+                  chartArea: {
+                    width: isMobile ? "100%" : "75%",
+                    height: isMobile ? "45%" : "40%",
+                  },
                   legend: {
-                    textStyle: { color: "white", fontSize: 16 },
+                    textStyle: { color: "white", fontSize: isMobile ? 12 : 16 },
                     alignment: "center",
                     position: "right",
                   },
-                  titleTextStyle: { color: "white", fontSize: 24 },
                   pieSliceTextStyle: { color: "white" },
                   colors: [
                     "--pie-rosewater",
@@ -141,6 +151,8 @@
                       .trim()
                   ),
                   pieSliceText: "none",
+                  width: isMobile ? screenWidth - 20 : undefined, // Set width for mobile
+                  height: isMobile ? 300 : undefined, // Set height for mobile
                 };
 
                 var chart = new google.visualization.PieChart(

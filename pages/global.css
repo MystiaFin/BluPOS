@@ -127,6 +127,14 @@ body {
     gap: 0;
     z-index: 1000;
     padding-top: 1.2rem;
+    justify-content: flex-start;
+  }
+  .sidebar .logo {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+  .sidebar .menu {
+    margin-bottom: 2rem;
   }
 
   .sidebar ul li {

@@ -89,4 +89,18 @@ $(document).ready(function () {
       $(".bill-total span:last-child").text("$0.00");
     });
   });
+
+  // toggle show checkout for mobile
+  $("#showCheckout").click(function () {
+    $(".checkout").addClass("show");
+    $(".checkout-overlay").addClass("show");
+    $("body").css("overflow", "hidden"); // Prevent scrolling when checkout is open
+  });
+
+  // toggle close checkout for mobile
+  $("#closeCheckout, .checkout-overlay").click(function () {
+    $(".checkout").removeClass("show");
+    $(".checkout-overlay").removeClass("show");
+    $("body").css("overflow", ""); // Re-enable scrolling
+  });
 });

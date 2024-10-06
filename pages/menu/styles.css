@@ -44,9 +44,16 @@
 
   .card-wrapper {
     gap: 1rem;
+    margin-bottom: 4rem;
   }
 
   .card {
-    max-width: 28vh;
+    max-width: 20vh;
+  }
+  .card h2 {
+    font-size: 0.8rem;
+  }
+  .content {
+    font-size: 0.65rem;
   }
 }
