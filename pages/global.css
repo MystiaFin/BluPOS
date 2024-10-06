@@ -22,9 +22,9 @@ body {
   justify-content: space-around;
 }
 
-.sidebar .logo {
-  font-size: 2rem;
-  font-weight: 700;
+.sidebar .logo img {
+  height: 3rem;
+  margin-top: 1rem;
 }
 
 .sidebar ul {

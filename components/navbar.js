@@ -9,7 +9,7 @@
                     </div>
                 </button>
                 <div class="logo">
-                    Logo
+                    <img src="/assets/logo.svg" alt="logo"/>
                 </div>
                 <div class="menu">
                     <ul>
