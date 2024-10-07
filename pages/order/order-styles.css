@@ -148,6 +148,17 @@ button {
   font-weight: bold;
 }
 
+.promo-code-container input {
+  margin-top: 1rem;
+  border: none;
+  focus: none;
+  background-color: var(--menu-bg);
+  color: var(--text-primary);
+  width: 300px;
+  padding: 0.8rem;
+  border-radius: 9999px;
+}
+
 .confirm {
   background-color: var(--btn-green);
   margin-top: 0.5rem;

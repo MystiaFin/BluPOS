@@ -82,11 +82,31 @@ $(document).ready(function () {
 
     // handle the pay button click event
     $(".confirm").click(function () {
-      alert("Checkout successful!");
+      const promoCode = $("#promoCode").val().trim();
+      const promoCodeMessage = $("#promoCodeMessage");
+
+      if (promoCode === "promo-code") {
+        promoCodeMessage
+          .text("Valid promo code applied!")
+          .removeClass("error-message")
+          .addClass("success-message");
+        alert("Checkout successful with promo code!");
+      } else if (promoCode === "") {
+        alert("Checkout successful!");
+      } else {
+        promoCodeMessage
+          .text("Invalid promo code")
+          .removeClass("success-message")
+          .addClass("error-message");
+        return;
+      }
+
       // reset quantities
       $(".count").text("0");
       $(".orders .order").remove();
       $(".bill-total span:last-child").text("$0.00");
+      $("#promoCode").val("");
+      promoCodeMessage.text("");
     });
   });
 
