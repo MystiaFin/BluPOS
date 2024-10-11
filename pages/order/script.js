@@ -83,21 +83,19 @@ $(document).ready(function () {
     // handle the pay button click event
     $(".confirm").click(function () {
       const promoCode = $("#promoCode").val().trim();
-      const promoCodeMessage = $("#promoCodeMessage");
+      const promoCodeAlert = $("#promoCodeAlert");
 
       if (promoCode === "promo-code") {
-        promoCodeMessage
-          .text("Valid promo code applied!")
-          .removeClass("error-message")
-          .addClass("success-message");
+        promoCodeAlert.html(
+          "<span class='success-message'>Valid promo code applied!</span>"
+        );
         alert("Checkout successful with promo code!");
       } else if (promoCode === "") {
         alert("Checkout successful!");
       } else {
-        promoCodeMessage
-          .text("Invalid promo code")
-          .removeClass("success-message")
-          .addClass("error-message");
+        promoCodeAlert.html(
+          "<span class='error-message' style='color: red;'>Invalid promo code</span>"
+        );
         return;
       }
 
