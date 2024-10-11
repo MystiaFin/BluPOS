@@ -104,7 +104,7 @@ $(document).ready(function () {
       $(".orders .order").remove();
       $(".bill-total span:last-child").text("$0.00");
       $("#promoCode").val("");
-      promoCodeMessage.text("");
+      promoCodeAlert.text("");
     });
   });
 
