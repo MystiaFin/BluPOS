@@ -151,10 +151,9 @@ button {
 .promo-code-container input {
   margin-top: 1rem;
   border: none;
-  focus: none;
   background-color: var(--menu-bg);
   color: var(--text-primary);
-  width: 300px;
+  outline: none;
   padding: 0.8rem;
   border-radius: 9999px;
 }
@@ -183,7 +182,7 @@ button {
   z-index: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .body-container {
     margin-left: 0;
     padding-left: 1rem;

@@ -1,4 +1,7 @@
 (function ($) {
+  $(document).ready(function () {
+    $("#sidebar").createSidebar();
+  });
   $.fn.createSidebar = function () {
     const sidebarHtml = `
             <nav class="sidebar">

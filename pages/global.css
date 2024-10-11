@@ -135,7 +135,7 @@ body {
 /* closing side bar */
 
 /* Mobile sidebar */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .sidebar {
     width: 100%;
     height: 100%;
